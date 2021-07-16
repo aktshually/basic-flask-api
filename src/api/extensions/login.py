@@ -16,4 +16,16 @@ def login_page():
     c.execute("UPDATE users SET lastLogin=datetime('now', '-3 hour') WHERE user_id=?", (result[3], ))
     connection.commit()
 
-    return jsonify({"status": "logged sucessfully"})
+    return jsonify(
+        {
+            "status": "logged sucessfully",
+            "data": {
+                "username": result[0],
+                "email": result[1],
+                "user_id": result[3],
+                "lastLogin": result[4],
+                "createdAt": result[5],
+                "updatedAt": result[6]
+            }
+        }
+    )

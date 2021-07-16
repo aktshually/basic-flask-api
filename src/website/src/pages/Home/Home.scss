@@ -1,0 +1,68 @@
+@import "../../assets/variables";
+
+body {
+    background-color: $green;
+}
+
+#HomePage {
+    color:  white;
+    > header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 10px;
+
+        > p {
+            font-family: $font;
+            font-size: 30px;
+        }
+
+        > nav > ul {
+            list-style: none;
+            display: flex;
+
+            > li > a {
+                padding: 15px 20px;
+                text-decoration: none;
+                font-family: $font;
+                transition: 500ms;
+                font-size: 18px;
+                color: white;
+                
+
+                &:hover {
+                    background-color: white;
+                    color: $green;
+                }
+            }
+        }
+    }
+
+    > main {
+        display: grid;
+        place-items: center;
+        margin-top: 2em;
+
+        > #title {
+            font-size:35px;
+            font-family: $font;
+            font-weight: 700;
+        }
+
+        > p {
+            font-size: 20px;
+            font-family: $font;
+
+            > a {
+                text-decoration: none;
+                color: white;
+                border-bottom: 1px solid transparent;
+                transition: 300ms;
+
+                &:hover {
+                    border-bottom: 1px solid white;
+                }
+            }
+        }
+    }
+}

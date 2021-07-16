@@ -1,0 +1,114 @@
+@import "../../assets/variables";
+
+#LoginPage {
+    display: flex;
+
+    > #left-side {
+        height: 100vh;
+        background: $green;
+        width: 55em;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > #greet {
+            color: white;
+            font-family: $font;
+            font-size: 40px;
+            font-weight: 700;
+            margin: 0px;
+        }
+
+        > #register {
+            color: white;
+            font-family: $font;
+            font-size: 20px;
+
+            > a {
+                color: white;
+                text-decoration: none;
+                border-bottom: 1px solid transparent;
+                transition: 500ms;
+
+                &:hover {
+                    border-bottom-color: white;
+                }
+            }
+        }
+    }
+
+    > #login-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: white;
+
+        > form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            > p {
+                font-family: $font;
+                font-weight: 700;
+                font-size: 30px;
+                margin: 0px;
+                padding: 0px;
+                
+            }
+
+            > input {
+                background: #e6e3e3;
+                border: none;
+                width: 200px;
+                height: 42px;
+                border-radius: 10px;
+                margin: 0px;
+                padding: 0px;
+                color: #9c9c9c;
+                font-family: $font;
+                text-indent: 10px;
+                font-size: 16px;
+                transition: 300ms;
+
+                &::placeholder {
+                    color: #9c9c9c;
+                    font-family: $font;
+                    text-indent: 10px;
+                    font-size: 16px;
+                }
+
+                &:focus {
+                    outline: none;
+                    box-sizing: 0;
+                    background-color:#d4d1d1;
+                }
+
+                &::selection {
+                    background: $green;
+                }
+
+                &:hover {
+                    background-color:#d4d1d1;
+                }
+            }
+
+            > button {
+                background: $green;
+                border: none;
+                height: 50px;
+                border-radius: 10px;
+                font-family: $font;
+                font-size: 17px;
+                color: white;
+                cursor: pointer;
+
+                &:hover {
+                    background: brightness(10)
+                }
+            }
+        }
+    }
+}

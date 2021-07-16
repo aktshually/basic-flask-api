@@ -20,4 +20,16 @@ def register_page():
     connection.commit()
     c.execute("SELECT * FROM users WHERE user_id=?", (user_id, ))
     info = c.fetchone()
-    return jsonify({"operation status": "success", "username": data["username"], "email": data["email"], "createdAt":info[3], "updatedAt":info[4], "user_id": info[5], "password": info[2]})
+    return jsonify(
+        {
+        "operation_status": "success",
+        "user_data": {
+            "username": data["username"],
+            "email": data["email"],
+            "createdAt":info[5],
+            "updatedAt":info[4],
+            "user_Id": info[3],
+            "password": info[2]
+        }
+    }
+    )
